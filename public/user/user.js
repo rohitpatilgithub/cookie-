@@ -11,7 +11,7 @@ async function userLogin(e) {
             headers : {
                 "Content-Type":"application/json",
             },
-            credentials : "include",
+            credentials : true,
             body : JSON.stringify({ email , password })
         })
         if(!userData.ok){
