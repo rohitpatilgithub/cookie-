@@ -15,7 +15,7 @@ export const handleUserLogin = async (req,res) => {
     const sessionId = uuidv4();
     setUser(sessionId,user);
     res.cookie('uid',sessionId);
-    console.log(sessionId);
+    console.log(sessionId); // cookie is logged here
     return res.status(200).json({message : 'User exists'});
   } catch (error) {
     return res.status(500).send("Something went wrong");
